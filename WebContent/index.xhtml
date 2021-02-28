@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+   <h:head>
+      <title>Welcome</title>
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+   </h:head>
+   
+   <h:body class="flex">
+      <h:form class="py-4 px-4 w-1/2">
+         <h3 class="w-full text-2xl font-bold text-center">Ingresar nombre y apellido.</h3>
+         <div class="flex flex-col w-64">
+	         <label>Nombre:</label>
+	         <h:inputText class="border border-black rounded px-2" placeholder="Ingrese el nombre" value="#{users.name}" />
+	
+	         <label>Apellido:</label>
+	         <h:inputText class="border border-black rounded px-2" placeholder="Ingrese el apellido" value="#{users.lastname}" />
+	         
+	         <h:commandButton 
+	         	class="my-4 bg-blue-800 hover:bg-blue-600 text-white uppercase font-bold cursor-pointer rounded" 
+	         	value="Guardar" 
+	         	action="#{users.saveData()}"/>
+         </div>
+      </h:form>
+   </h:body>
+
+</html>
